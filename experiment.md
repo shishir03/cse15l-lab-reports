@@ -6,7 +6,7 @@ Section 1
 
 ![Image](https://live.staticflickr.com/65535/51697188264_70f296e8f9_k.jpg)
 
-[Go to index.html here!](index.html) It is an amazing site, and you should click the link **right now**.
+[Go to index.html here!](index.html) It is a truly amazing site, and you should click the link **right now**.
 
 > This is the best site ever created.
 
