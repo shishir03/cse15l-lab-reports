@@ -29,9 +29,13 @@ There are various useful commands on the terminal that we can also run on the re
  - `cat` - Prints out the contents of the specified file
  - `pwd` - Prints the full path of the current working directory
 
-Here's what running one such command might look like:
+Here's what running these commands might look like:
 
-![Image](cat.png)
+`ls -a`: ![Image](ls.png)
+
+`cat`: ![Image](cat.png)
+
+`pwd`: ![Image](pwd.png)
 
 Moving Files with `scp`
 -----------------------
