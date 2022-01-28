@@ -11,11 +11,11 @@ Code Change Difference
 Failure Inducing Input
 --------------------
 
-[Here](https://github.com/alien-traveler/markdown-parse/blob/main/test3.md) is a test file for which the original code would fail; it contains no brackets or links, so the original program would be unable to find them and thus throw an exception as shown below.
+[Here](https://github.com/alien-traveler/markdown-parse/blob/main/test3.md) is a test file for which the original code would fail.
 
 ![Image](exception.png)
 
-Conclusion
+Relationship between Failure Inducing Input, Bugs, and Symptoms
 ----------
 
-The potential failure inducing output was a way for our group to figure out whether there were any bugs present in the code, and in this case there were. The presence of a symptom, which in this case was the exception, allowed us to discover that there was a bug, and closely examining the output helped us figure out where it was.
+The failure-inducing input contains no brackets or links, so the original program would be unable to find them and thus throw an exception as shown above, which is a symptom. The underlying bug was the fact that the program looked for brackets via `indexOf()` and then used the values it got regardless of whether brackets were actually present, leading to an `IndexOutOfBounds` exception.
