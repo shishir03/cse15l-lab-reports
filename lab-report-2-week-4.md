@@ -1,21 +1,30 @@
 Failure Inducing Input, Bugs, and Symptoms on Markdown Parse
 ===================================
 
-Note: Our group only had one main commit that fixed bugs in the original code. Therefore, this is the only code change that will be shown here.
+Note: Our group only had two main commits that fixed bugs in the original code. Therefore, these are the only code changes that will be shown here.
 
-Code Change Difference
------------------
-
-![Image](code_diff.png)
-
-Failure Inducing Input
+Code Change #1
 --------------------
 
-[Here](https://github.com/alien-traveler/markdown-parse/blob/main/test3.md) is a test file for which the original code would fail.
+ - **Failure Inducing Input** - [Here](https://github.com/alien-traveler/markdown-parse/blob/main/test3.md) is a test file for which the original code would fail, producing the output shown below.
 
 ![Image](exception.png)
 
-Relationship between Failure Inducing Input, Bugs, and Symptoms
-----------
+ - **Code Change Difference**
 
-The failure-inducing input contains no brackets or links, so the original program would be unable to find them and thus throw an exception as shown above, which is a symptom. The underlying bug was the fact that the program looked for brackets via `indexOf()` and then used the values it got regardless of whether brackets were actually present, leading to an `IndexOutOfBounds` exception.
+![Image](code_diff.png)
+
+ - **Relationship between Failure Inducing Input, Bugs, and Symptoms** - The failure-inducing input contains no brackets or links, so the original program would be unable to find them and thus throw an exception as shown above, which is a symptom. The underlying bug was the fact that the program looked for brackets via `indexOf()` and then used the values it got regardless of whether brackets were actually present, leading to an `IndexOutOfBounds` exception.
+
+Code Change #2
+----------------
+
+- **Failure Inducing Input** - [Here](test_space.txt) is a test file for which the original code would fail, producing the output shown below.
+
+![Image](space.png)
+
+- **Code Change Difference**
+
+![Image](diff2.png)
+
+- **Relationship between Failure Inducing Input, Bugs, and Symptoms** - The failure-inducing input contained a "URL" with a space in it, so the original program would mistake it for a url and add it to the list, which is a symptom. The underlying bug was the fact that the program didn't first check whether there were spaces in the URL.
