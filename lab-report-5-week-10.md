@@ -31,8 +31,7 @@ This check would probably go somewhere in the code shown below.
 
 ![Image](201.png)
 
-There are no links in this file, but the implementation provided outputs `
-["baz"]`, while my implementation correctly does not output anything. The 
+There are no links in this file, but the implementation provided outputs `["baz"]`, while my implementation correctly does not output anything. The 
 reason for this is most likely because the provided implementation does not 
 check the spacing between the close bracket and the open parentheses, so it 
 interprets anything in parentheses after a set of brackets as a link, 
